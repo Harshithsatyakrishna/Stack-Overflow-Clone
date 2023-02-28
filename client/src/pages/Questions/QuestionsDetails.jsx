@@ -9,9 +9,7 @@ import downvote from "../../assets/sort-down.svg";
 import "./Questions.css";
 import Avatar from "../../components/Avatar/Avatar";
 import DisplayAnswer from "./DisplayAnswer";
-import { postAnswer } from "../../actions/question";
-
-
+import { postAnswer ,deleteQuestion } from "../../actions/question";
 
 const QuestionsDetails = () => {
   const { _id } = useParams();
@@ -49,6 +47,11 @@ const QuestionsDetails = () => {
   const handleShare =() =>{
     copy(url+location.pathname)
     alert('Copy url : '+url+location.pathname)
+  }
+
+
+  const handleDelete= () =>{
+    dispatch(deleteQuestion(_id, Navigate))
   }
 
   return (
@@ -91,7 +94,7 @@ const QuestionsDetails = () => {
                           <button type="button" onClick={handleShare}>Share</button>
                           {
                             User?.result?._id === question?.userId && (
-                              <button type="button">Delete</button>
+                              <button type="button" onClick={handleDelete}>Delete</button>
                           )}
                         </div>
                         <div>
