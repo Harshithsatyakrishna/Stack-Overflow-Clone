@@ -36,7 +36,8 @@ const QuestionsDetails = () => {
             _id,
             noOfAnswers: answerLength + 1,
             answerBody: Answer,
-            userAnswered: User?.result.name,
+            userAnswered: User?.result.name, 
+            userId: User.result._id
           })
         );
       }
