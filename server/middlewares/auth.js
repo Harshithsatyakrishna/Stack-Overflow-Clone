@@ -9,7 +9,7 @@ const auth = (req, res, next) => {
 
     next();
   } catch (error) {
-    console.log(error);
+    res.status(404).send({ message: "no user found with given credentials" });
   }
 };
 
