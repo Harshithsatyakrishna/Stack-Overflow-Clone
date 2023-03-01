@@ -5,14 +5,20 @@ import Auth from './pages/Auth/Auth'
 import Questions from './pages/Questions/Questions'
 import AskQuestion from './pages/AskQuestion/AskQuestion'
 import DisplayQuestion from './pages/Questions/DisplayQuestion'
+import Tags from './pages/Tags/Tags'
+import Users from './pages/Users/Users'
+
 const AllRoutes = () => {
   return (
     <Routes>
-        <Route exact path='/' element={<Home/>} />
-        <Route exact path='/Auth' element={<Auth/>} />
-        <Route exact path='/Questions' element={<Questions/>} />
-        <Route exact path='/AskQuestion' element={<AskQuestion/>} />
-        <Route exact path='/Questions/:_id' element={<DisplayQuestion/>} />
+        <Route  path='/' element={<Home/>} />
+        <Route  path='/Auth' element={<Auth/>} />
+        <Route  path='/Questions' element={<Questions/>} />
+        <Route  path='/AskQuestion' element={<AskQuestion/>} />
+        <Route  path='/Questions/:_id' element={<DisplayQuestion/>} />
+        <Route  path='/Tags' element ={<Tags/>} />
+        <Route  path='/Users' element ={<Users/>} />
+
     </Routes>
   )
 }
