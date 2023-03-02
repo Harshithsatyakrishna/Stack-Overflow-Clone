@@ -7,5 +7,5 @@ use the above command on the server side to install dependencies
 # `npm start`
 use the above command on the client side to run the website(client)
 
-#`npm start`
+# `npm start`
 use the above command on the server side to run server
