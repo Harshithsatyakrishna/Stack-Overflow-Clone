@@ -7,7 +7,7 @@ import LeftSidebar from '../../components/LeftSidebar/LeftSidebar'
 import UsersList from './UsersList'
 const Users = () => {
 
-  const location = useLocation()
+  //const location = useLocation()
 
   return (
     <div className='home-container-1'>
